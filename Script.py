@@ -4,14 +4,13 @@ class script(object):
 
     FEATURES_TXT = """<b>ʜᴇʀᴇ ɪꜱ ᴀʟʟ ᴍʏ ꜰᴜɴᴛɪᴏɴꜱ.</b>"""
 
-    ABOUT_TXT = """<b>╭────[ ᴍʏ ᴅᴇᴛᴀɪʟs ]────⍟
-├⍟ ᴍʏ ɴᴀᴍᴇ : <a href=https://t.me/{}>{}</a>
-├⍟ ᴏᴡɴᴇʀ : <a href={}>ᴏᴡɴᴇʀ</a> 
-├⍟ ʟɪʙʀᴀʀʏ : <a href='https://docs.pyrogram.org/'>ᴘʏʀᴏɢʀᴀᴍ</a>
-├⍟ ʟᴀɴɢᴜᴀɢᴇ : <a href='https://www.python.org/download/releases/3.0/'>ᴘʏᴛʜᴏɴ 𝟹</a> 
-├⍟ ᴅᴀᴛᴀʙᴀꜱᴇ : <a href='https://www.mongodb.com/'>ᴍᴏɴɢᴏ ᴅʙ</a> 
-├⍟ ꜱᴇʀᴠᴇʀ : <a href='https://heroku.com/'>ʜᴇʀᴏᴋᴜ</a> 
-├⍟ ꜱᴛᴀᴛᴜꜱ : ᴠ4.8 [ ꜱᴛᴀʙʟᴇ ]
+    ABOUT_TXT = """<b>╭────[ MY DETAILS ]────⍟
+├⍟ MY NAME : <a href=https://t.me/{}>{}</a>
+├⍟ CREATOR : <a href=https://t.me/infinity_movies2>CREATOR</a> 
+├⍟ LIBRARY : PYROGRAM
+├⍟ LANGUAGE : PYTHON
+├⍟ DATABASE : INFINITY MOVIES
+├⍟ STATUS : ᴠ4.8 [ STABLE ]
 ╰───────────────⍟</b>"""
 
     FORCESUB_TEXT="""<b>
@@ -19,7 +18,7 @@ class script(object):
 
 ʏᴏᴜ ᴡɪʟʟ ʜᴀᴠᴇ ᴛᴏ ᴊᴏɪɴ ᴏᴜʀ ᴏғғɪᴄɪᴀʟ ᴄʜᴀɴɴᴇʟ.
 
-ғɪʀsᴛ, ᴄʟɪᴄᴋ ᴏɴ ᴛʜᴇ "Jᴏɪɴ ᴜᴘᴅᴀᴛᴇ Cʜᴀɴɴᴇʟ" ʙᴜᴛᴛᴏɴ, ᴛʜᴇɴ, ᴄʟɪᴄᴋ ᴏɴ ᴛʜᴇ "ʀᴇᴏ̨ᴜᴇsᴛ ᴛᴏ Jᴏɪɴ" ʙᴜᴛᴛᴏɴ.
+ғɪʀsᴛ, ᴄʟɪᴄᴋ ᴏɴ ᴛʜᴇ "Jᴏɪɴ ᴜᴘᴅᴀᴛᴇ Cʜᴀɴɴᴇʟ" ʙᴜᴛᴛᴏɴ. 
 
 ᴀғᴛᴇʀ ᴛʜᴀᴛ, ᴛʀʏ ᴀᴄᴄᴇssɪɴɢ ᴛʜᴀᴛ ᴍᴏᴠɪᴇ ᴛʜᴇɴ, ᴄʟɪᴄᴋ ᴏɴ ᴛʜᴇ "ᴛʀʏ ᴀɢᴀɪɴ" ʙᴜᴛᴛᴏɴ.
     </b>"""
@@ -197,7 +196,7 @@ Nᴀᴍᴇ - {}
 
 ɴᴏᴡ ʏᴏᴜ ᴄᴀɴ ʙᴜʏ ᴏᴜʀ ᴘʀᴇᴍɪᴜᴍ ꜱᴇʀᴠɪᴄᴇ ᴜꜱɪɴɢ ᴛᴇʟᴇɢʀᴀᴍ ꜱᴛᴀʀꜱ.  
 
-ɪꜰ ʏᴏᴜ ꜰᴀᴄᴇ ᴀɴʏ ᴘʀᴏʙʟᴇᴍ, ᴛᴀᴋᴇ ᴀ ꜱᴄʀᴇᴇɴꜱʜᴏᴛ ᴀɴᴅ ꜱᴇɴᴅ ɪᴛ ᴛᴏ - @SilentXBotz
+ɪꜰ ʏᴏᴜ ꜰᴀᴄᴇ ᴀɴʏ ᴘʀᴏʙʟᴇᴍ, ᴛᴀᴋᴇ ᴀ ꜱᴄʀᴇᴇɴꜱʜᴏᴛ ᴀɴᴅ ꜱᴇɴᴅ ɪᴛ ᴛᴏ - @INFINITYMOVIESCONTACT
 
 ꜱᴇʟᴇᴄᴛ ʏᴏᴜʀ ᴅᴇꜱɪʀᴇᴅ ᴀᴍᴏᴜɴᴛ ᴀɴᴅ ᴘᴜʀᴄʜᴀꜱᴇ ᴀ ꜱᴜʙꜱᴄʀɪᴘᴛɪᴏɴ 👇.</b>
 """
@@ -241,7 +240,7 @@ Nᴀᴍᴇ : {}
 
 Mᴇꜱꜱᴀɢᴇ : <b>{}</b>"""
     
-    CAPTION = """<b>{file_name}\nUploaded By: <a herf="https://t.me/SilentXBotz">[SilentXBotz]</a></b>"""
+    CAPTION = """<b>{file_name}\nUploaded By: <a herf="https://t.me/infinity_movies2">[INFINITY MOVIES]</a></b>"""
 
     IMDB_TEMPLATE_TXT = """
 <b>🏷 Title</b>: <a href={url}>{title}</a>
@@ -261,13 +260,7 @@ Requested by : {message.from_user.mention}</b>"""
 🌐 ᴛɪᴍᴇᴢᴏɴᴇ : <code>ᴀꜱɪᴀ/ᴋᴏʟᴋᴀᴛᴀ</code>
 🛠️ ʙᴜɪʟᴅ ꜱᴛᴀᴛᴜꜱ : <code>V4.2 [ ꜱᴛᴀʙʟᴇ ]</code>
 </b>"""
-    LOGO = """
-  ____  _ _            _  __  ______        _       
- / ___|(_) | ___ _ __ | |_\ \/ / __ )  ___ | |_ ____
- \___ \| | |/ _ \ '_ \| __|\  /|  _ \ / _ \| __|_  /
-  ___) | | |  __/ | | | |_ /  \| |_) | (_) | |_ / / 
- |____/|_|_|\___|_| |_|\__/_/\_\____/ \___/ \__/___|
-                                                                                                                                                                            
+    LOGO = """                                                                                                                                                                
 𝙱𝙾𝚃 𝚆𝙾𝚁𝙺𝙸𝙽𝙶 𝙿𝚁𝙾𝙿𝙴𝚁𝙻𝚈...."""
 
     ADMIN_CMD = """ʜᴇʏ 👋,
