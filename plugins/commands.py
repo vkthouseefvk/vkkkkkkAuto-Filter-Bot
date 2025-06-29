@@ -994,7 +994,7 @@ async def siletxbotz_list_movies(client, message):
         msg += "\n".join(f"<b>{i+1}. {m}</b>" for i, m in enumerate(movies))
         await message.reply(msg[:4096], parse_mode=ParseMode.HTML)
     except Exception as e:
-        logger.error(f"Error in siletxbotz_list_movies: {e}")
+        logger.error(f"Error in Movies list: {e}")
         await message.reply("An Error Occurred ☹️", parse_mode=ParseMode.HTML)
 
 @Client.on_message(filters.private & filters.command("series"))
@@ -1010,7 +1010,7 @@ async def siletxbotz_list_series(client, message):
             msg += f"<b>{i}. {title} - Season {season_list}</b>\n"
         await message.reply(msg[:4096], parse_mode=ParseMode.HTML)
     except Exception as e:
-        logger.error(f"Error in siletxbotz_list_series: {e}")
+        logger.error(f"Error in Movies list: {e}")
         await message.reply("An Error Occurred ☹️", parse_mode=ParseMode.HTML)
 
 
