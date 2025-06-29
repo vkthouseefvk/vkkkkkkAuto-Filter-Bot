@@ -52,10 +52,10 @@ DATABASE_URI2 = environ.get('DATABASE_URI2', "")
 
 GRP_LNK = environ.get('GRP_LNK', 'https://t.me/infinitymoviesgroup')
 CHNL_LNK = environ.get('CHNL_LNK', 'https://t.me/infinity_movies2')
-OWNER_LNK = environ.get('OWNER_LNK', 'https://t.me/infinity_movies2')
+OWNER_LNK = environ.get('OWNER_LNK', 'https://t.me/keepmessage_bot')
 UPDATE_CHANNEL_LNK = environ.get('UPDATE_CHANNEL_LNK', 'https://t.me/infinity_movies_updates')
 
-AUTH_CHANNEL = environ.get("AUTH_CHANNEL", "-1001847367198") # add multiple channels here, separated by single space
+AUTH_CHANNEL = environ.get("AUTH_CHANNEL", "-1001759223130") # add multiple channels here, separated by single space
 AUTH_CHANNEL = [int(ch) for ch in AUTH_CHANNEL.strip().split()] if AUTH_CHANNEL else []
 AUTH_REQ_CHANNEL = environ.get('AUTH_REQ_CHANNEL', '') # add multiple channels here, separated by single space
 AUTH_REQ_CHANNEL = [int(ch) for ch in AUTH_REQ_CHANNEL.strip().split()] if AUTH_REQ_CHANNEL else []
