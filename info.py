@@ -70,13 +70,13 @@ TUTORIAL_2 = environ.get("TUTORIAL_2", "https://t.me/")
 TUTORIAL_3 = environ.get("TUTORIAL_3", "https://t.me/")
 
 SHORTENER_API = environ.get("SHORTENER_API", "10815cdac1c807a7b1c02b7cbb274e6a2bc1f75e")
-SHORTENER_WEBSITE = environ.get("SHORTENER_WEBSITE", "https://gyanilinks.com/")
+SHORTENER_WEBSITE = environ.get("SHORTENER_WEBSITE", "gyanilinks.com")
 
-SHORTENER_API2 = environ.get("SHORTENER_API2", "")
-SHORTENER_WEBSITE2 = environ.get("SHORTENER_WEBSITE2", "")
+SHORTENER_API2 = environ.get("SHORTENER_API2", "10815cdac1c807a7b1c02b7cbb274e6a2bc1f75e")
+SHORTENER_WEBSITE2 = environ.get("SHORTENER_WEBSITE2", "gyanilinks.com")
 
-SHORTENER_API3 = environ.get("SHORTENER_API3", "")
-SHORTENER_WEBSITE3 = environ.get("SHORTENER_WEBSITE3", "")
+SHORTENER_API3 = environ.get("SHORTENER_API3", "10815cdac1c807a7b1c02b7cbb274e6a2bc1f75e")
+SHORTENER_WEBSITE3 = environ.get("SHORTENER_WEBSITE3", "gyanilinks.com")
 
 TWO_VERIFY_GAP = int(environ.get('TWO_VERIFY_GAP', "1200"))
 THREE_VERIFY_GAP = int(environ.get('THREE_VERIFY_GAP', "54000"))
