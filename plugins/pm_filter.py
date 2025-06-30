@@ -1407,22 +1407,24 @@ async def cb_handler(client: Client, query: CallbackQuery):
                 InlineKeyboardButton('🚫 ᴄʟᴏꜱᴇ 🚫', callback_data='close_data')
             ]]
             reply_markup = InlineKeyboardMarkup(btn)
-            await client.edit_message_media(
-                chat_id=query.message.chat.id,
-				message_id=query.message.id,
-				media=InputMediaPhoto(
-					media=SUBSCRIPTION,
-					caption=script.PREMIUM_TEXT.format(query.from_user.mention),
-					parse_mode=enums.ParseMode.HTML
-				),
-                reply_markup=reply_markup,
-            ) 
-            # await query.message.reply_photo(
-            #     photo=(SUBSCRIPTION),
-            #     caption=script.PREMIUM_TEXT.format(query.from_user.mention),
-            #     reply_markup=reply_markup,
-            #     parse_mode=enums.ParseMode.HTML
-            # ) 
+            try:
+                await client.edit_message_media(
+			chat_id=query.message.chat.id,
+			message_id=query.message.id,
+			media=InputMediaPhoto(
+				media=SUBSCRIPTION,
+				caption=script.PREMIUM_TEXT.format(query.from_user.mention),
+				parse_mode=enums.ParseMode.HTML
+			),
+			reply_markup=reply_markup,
+		)
+            except:
+                await query.message.reply_photo(
+                    photo=(SUBSCRIPTION),
+                    caption=script.PREMIUM_TEXT.format(query.from_user.mention),
+                    reply_markup=reply_markup,
+                    parse_mode=enums.ParseMode.HTML
+		) 
         except Exception as e:
             print(e)
 
@@ -1434,12 +1436,24 @@ async def cb_handler(client: Client, query: CallbackQuery):
                 InlineKeyboardButton('🚫 ᴄʟᴏꜱᴇ 🚫', callback_data='close_data')
             ]]
             reply_markup = InlineKeyboardMarkup(btn)
-            await query.message.reply_photo(
-                photo=(SUBSCRIPTION),
-                caption=script.PREMIUM_UPI_TEXT.format(query.from_user.mention),
-                reply_markup=reply_markup,
-                parse_mode=enums.ParseMode.HTML
-            ) 
+            try:
+                await client.edit_message_media(
+			chat_id=query.message.chat.id,
+			message_id=query.message.id,
+			media=InputMediaPhoto(
+				media=SUBSCRIPTION,
+				caption=script.PREMIUM_UPI_TEXT.format(query.from_user.mention),
+				parse_mode=enums.ParseMode.HTML
+			),
+			reply_markup=reply_markup,
+		) 
+            except:
+                await query.message.reply_photo(
+			photo=(SUBSCRIPTION),
+			caption=script.PREMIUM_UPI_TEXT.format(query.from_user.mention),
+			reply_markup=reply_markup,
+			parse_mode=enums.ParseMode.HTML
+		) 
         except Exception as e:
             print(e)
 
