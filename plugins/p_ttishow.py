@@ -14,7 +14,7 @@ from time import time
 from bot import botStartTime
 import logging
 
-"""-----------------------------------------https://t.me/SilentXBotz--------------------------------------"""
+"""-----------------------------------------https://t.me/Infinity_movies2--------------------------------------"""
 
 @Client.on_message(filters.new_chat_members & filters.group)
 async def save_group(bot, message):
@@ -258,7 +258,7 @@ async def unban_a_user(bot, message):
     except PeerIdInvalid:
         return await message.reply("This is an invalid user, make sure ia have met him before.")
     except IndexError:
-        return await message.reply("Thismight be a channel, make sure its a user.")
+        return await message.reply("This might be a channel, make sure its a user.")
     except Exception as e:
         return await message.reply(f'Error - {e}')
     else:
