@@ -1345,25 +1345,16 @@ async def cb_handler(client: Client, query: CallbackQuery):
                     InlineKeyboardButton('🚫 ᴇᴀʀɴ ᴍᴏɴᴇʏ ᴡɪᴛʜ ʙᴏᴛ 🚫', callback_data="earn")
                 ]]
         reply_markup = InlineKeyboardMarkup(buttons)
-	try:
-            await client.edit_message_text(
-		    chat_id=query.message.chat.id,
-		    message_id=query.message.id,
-		    text=script.START_TXT,
-		    reply_markup=reply_markup,
-		    parse_mode=enums.ParseMode.HTML
-	    )
-        except:
-            await client.edit_message_media(
-		    query.message.chat.id, 
-		    query.message.id, 
-		    InputMediaPhoto(random.choice(PICS))
-	    )
-	    await query.message.edit_text(
-		    text=script.START_TXT.format(query.from_user.mention, temp.U_NAME, temp.B_NAME),
-		    reply_markup=reply_markup,
-		    parse_mode=enums.ParseMode.HTML
-	    )
+        await client.edit_message_media(
+		query.message.chat.id, 
+		query.message.id, 
+		InputMediaPhoto(random.choice(PICS))
+	)
+	await query.message.edit_text(
+		text=script.START_TXT.format(query.from_user.mention, temp.U_NAME, temp.B_NAME),
+		reply_markup=reply_markup,
+		parse_mode=enums.ParseMode.HTML
+	)
   
     elif query.data == "give_trial":
         try:
@@ -1439,10 +1430,12 @@ async def cb_handler(client: Client, query: CallbackQuery):
 
     elif query.data == "upi":
         try:
-            btn = [[ 
-                InlineKeyboardButton('📱 ꜱᴇɴᴅ  ᴘᴀʏᴍᴇɴᴛ ꜱᴄʀᴇᴇɴꜱʜᴏᴛ', url=OWNER_LNK),
+            btn = [[
+		    InlineKeyboardButton('📱 ꜱᴇɴᴅ  ᴘᴀʏᴍᴇɴᴛ ꜱᴄʀᴇᴇɴꜱʜᴏᴛ', url=OWNER_LNK),
             ],[
-                InlineKeyboardButton('🚫 ᴄʟᴏꜱᴇ 🚫', callback_data='close_data')
+		    InlineKeyboardButton("⋞ ʙᴀᴄᴋ", callback_data="buy"),
+	    ],[
+		    InlineKeyboardButton('🚫 ᴄʟᴏꜱᴇ 🚫', callback_data='close_data')
             ]]
             reply_markup = InlineKeyboardMarkup(btn)
             try:
@@ -1474,17 +1467,27 @@ async def cb_handler(client: Client, query: CallbackQuery):
             ]
             buttons = [btn[i:i + 2] for i in range(0, len(btn), 2)]
             buttons.append([InlineKeyboardButton("⋞ ʙᴀᴄᴋ", callback_data="buy")])
+	    buttons.append([InlineKeyboardButton('🚫 ᴄʟᴏꜱᴇ 🚫', callback_data='close_data')])
             reply_markup = InlineKeyboardMarkup(buttons)
-            await client.edit_message_media(
-                query.message.chat.id, 
-                query.message.id, 
-                InputMediaPhoto(random.choice(PICS))
-	        ) 
-            await query.message.edit_text(
-                text=script.PREMIUM_STAR_TEXT,
-                reply_markup=reply_markup,
-                parse_mode=enums.ParseMode.HTML
-	    )
+            try:
+                await client.edit_message_text(
+			chat_id=query.message.chat.id,
+			message_id=query.message.id,
+			text=script.PREMIUM_STAR_TEXT,
+			reply_markup=reply_markup,
+			parse_mode=enums.ParseMode.HTML
+		)
+            except:
+                await client.edit_message_media(
+			query.message.chat.id, 
+			query.message.id, 
+			InputMediaPhoto(random.choice(PICS))
+		)
+		await query.message.edit_text(
+			text=script.PREMIUM_STAR_TEXT,
+			reply_markup=reply_markup,
+			parse_mode=enums.ParseMode.HTML
+		)
         except Exception as e:
             print(e)
 
