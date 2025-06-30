@@ -1345,16 +1345,25 @@ async def cb_handler(client: Client, query: CallbackQuery):
                     InlineKeyboardButton('🚫 ᴇᴀʀɴ ᴍᴏɴᴇʏ ᴡɪᴛʜ ʙᴏᴛ 🚫', callback_data="earn")
                 ]]
         reply_markup = InlineKeyboardMarkup(buttons)
-        await client.edit_message_media(
-            query.message.chat.id, 
-            query.message.id, 
-            InputMediaPhoto(random.choice(PICS))
-        )
-        await query.message.edit_text(
-            text=script.START_TXT.format(query.from_user.mention, temp.U_NAME, temp.B_NAME),
-            reply_markup=reply_markup,
-            parse_mode=enums.ParseMode.HTML
-        )
+	try:
+            await client.edit_message_text(
+		    chat_id=query.message.chat.id,
+		    message_id=query.message.id,
+		    text=script.START_TXT,
+		    reply_markup=reply_markup,
+		    parse_mode=enums.ParseMode.HTML
+	    )
+        except:
+            await client.edit_message_media(
+		    query.message.chat.id, 
+		    query.message.id, 
+		    InputMediaPhoto(random.choice(PICS))
+	    )
+	    await query.message.edit_text(
+		    text=script.START_TXT.format(query.from_user.mention, temp.U_NAME, temp.B_NAME),
+		    reply_markup=reply_markup,
+		    parse_mode=enums.ParseMode.HTML
+	    )
   
     elif query.data == "give_trial":
         try:
