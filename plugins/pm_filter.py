@@ -1412,7 +1412,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
 				message_id=query.message.id,
 				media=InputMediaPhoto(
 					media=SUBSCRIPTION,
-					caption=script.PREMIUM_UPI_TEXT.format(query.from_user.mention),
+					caption=script.PREMIUM_TEXT.format(query.from_user.mention),
 					parse_mode=enums.ParseMode.HTML
 				),
                 reply_markup=reply_markup,
