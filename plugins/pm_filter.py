@@ -1442,16 +1442,28 @@ async def cb_handler(client: Client, query: CallbackQuery):
             buttons = [btn[i:i + 2] for i in range(0, len(btn), 2)]
             buttons.append([InlineKeyboardButton("⋞ ʙᴀᴄᴋ", callback_data="buy")])
             reply_markup = InlineKeyboardMarkup(buttons)
+
             await client.edit_message_media(
-                query.message.chat.id, 
-                query.message.id, 
-                InputMediaPhoto(random.choice(PICS))
-	        ) 
-            await query.message.edit_text(
-                text=script.PREMIUM_STAR_TEXT,
-                reply_markup=reply_markup,
-                parse_mode=enums.ParseMode.HTML
-	    )
+                chat_id=query.message.chat.id,
+                message_id=query.message.id,
+                media=InputMediaPhoto(
+                    media=random.choice(PICS),
+                    caption=script.PREMIUM_STAR_TEXT,
+                    parse_mode=enums.ParseMode.HTML
+                ),
+                reply_markup=reply_markup
+            )
+
+     #        await client.edit_message_media(
+     #            query.message.chat.id, 
+     #            query.message.id, 
+     #            InputMediaPhoto(random.choice(PICS))
+	    #     ) 
+     #        await query.message.edit_text(
+     #            text=script.PREMIUM_STAR_TEXT,
+     #            reply_markup=reply_markup,
+     #            parse_mode=enums.ParseMode.HTML
+	    # )
         except Exception as e:
             print(e)
 
