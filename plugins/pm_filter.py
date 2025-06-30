@@ -1407,12 +1407,22 @@ async def cb_handler(client: Client, query: CallbackQuery):
                 InlineKeyboardButton('🚫 ᴄʟᴏꜱᴇ 🚫', callback_data='close_data')
             ]]
             reply_markup = InlineKeyboardMarkup(btn)
-            await query.message.reply_photo(
-                photo=(SUBSCRIPTION),
-                caption=script.PREMIUM_TEXT.format(query.from_user.mention),
+            await client.edit_message_media(
+                chat_id=query.message.chat.id,
+				message_id=query.message.id,
+				media=InputMediaPhoto(
+					media=SUBSCRIPTION,
+					caption=script.PREMIUM_UPI_TEXT.format(query.from_user.mention),
+					parse_mode=enums.ParseMode.HTML
+				),
                 reply_markup=reply_markup,
-                parse_mode=enums.ParseMode.HTML
             ) 
+            # await query.message.reply_photo(
+            #     photo=(SUBSCRIPTION),
+            #     caption=script.PREMIUM_TEXT.format(query.from_user.mention),
+            #     reply_markup=reply_markup,
+            #     parse_mode=enums.ParseMode.HTML
+            # ) 
         except Exception as e:
             print(e)
 
@@ -1436,34 +1446,22 @@ async def cb_handler(client: Client, query: CallbackQuery):
     elif query.data == "star":
         try:
             btn = [
-                InlineKeyboardButton(f"{stars}⭐ 111", callback_data=f"buy_{stars}")
+                InlineKeyboardButton(f"{stars}⭐", callback_data=f"buy_{stars}")
                 for stars, days in STAR_PREMIUM_PLANS.items()
             ]
             buttons = [btn[i:i + 2] for i in range(0, len(btn), 2)]
             buttons.append([InlineKeyboardButton("⋞ ʙᴀᴄᴋ", callback_data="buy")])
             reply_markup = InlineKeyboardMarkup(buttons)
-
             await client.edit_message_media(
-                chat_id=query.message.chat.id,
-                message_id=query.message.id,
-                media=InputMediaPhoto(
-                    media=random.choice(PICS),
-                    caption=script.PREMIUM_STAR_TEXT,
-                    parse_mode=enums.ParseMode.HTML
-                ),
-                reply_markup=reply_markup
-            )
-
-     #        await client.edit_message_media(
-     #            query.message.chat.id, 
-     #            query.message.id, 
-     #            InputMediaPhoto(random.choice(PICS))
-	    #     ) 
-     #        await query.message.edit_text(
-     #            text=script.PREMIUM_STAR_TEXT,
-     #            reply_markup=reply_markup,
-     #            parse_mode=enums.ParseMode.HTML
-	    # )
+                query.message.chat.id, 
+                query.message.id, 
+                InputMediaPhoto(random.choice(PICS))
+	        ) 
+            await query.message.edit_text(
+                text=script.PREMIUM_STAR_TEXT,
+                reply_markup=reply_markup,
+                parse_mode=enums.ParseMode.HTML
+	    )
         except Exception as e:
             print(e)
 
