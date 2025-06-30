@@ -1436,7 +1436,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
     elif query.data == "star":
         try:
             btn = [
-                InlineKeyboardButton(f"{stars}⭐", callback_data=f"buy_{stars}")
+                InlineKeyboardButton(f"{stars}⭐ 111", callback_data=f"buy_{stars}")
                 for stars, days in STAR_PREMIUM_PLANS.items()
             ]
             buttons = [btn[i:i + 2] for i in range(0, len(btn), 2)]
