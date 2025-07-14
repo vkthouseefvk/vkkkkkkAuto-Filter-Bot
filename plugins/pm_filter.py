@@ -753,7 +753,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
             await query.answer(url=f"https://telegram.me/{temp.U_NAME}?start=allfiles_{query.message.chat.id}_{key}")
             return
         except UserIsBlocked:
-            await query.answer('Uɴʙʟᴏᴄᴋ ᴛʜᴇ ʙᴏᴛ ᴍᴀʜɴ !', show_alert=True)
+            await query.answer('Uɴʙʟᴏᴄᴋ ᴛʜᴇ ʙᴏᴛ ᴍᴀɴ!', show_alert=True)
         except PeerIdInvalid:
             await query.answer(url=f"https://telegram.me/{temp.U_NAME}?start=sendfiles3_{key}")
         except Exception as e:
@@ -1115,7 +1115,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
                     chat_id=int(from_user),
                     text=(
                         f"<b>Hᴇʏ {user.mention}\n\n"
-                        f"Yᴏᴜʀ Rᴇǫᴜᴇsᴛ <code>{content}</code> ɪs Nᴏᴛ Aᴠᴀɪʟᴀʙʟᴇ ɪɴ Hɪɴᴅɪ ʀɪɢʜᴛ ɴᴏᴡ. Sᴏ ᴏᴜʀ ᴍᴏᴅᴇʀᴀᴛᴏʀs ᴄᴀɴ'ᴛ ᴜᴘʟᴏᴀᴅ ɪᴛ\n\n"
+                        f"Yᴏᴜʀ Rᴇǫᴜᴇsᴛ <code>{content}</code> ɪs Nᴏᴛ Aᴠᴀɪʟᴀʙʟᴇ ʀɪɢʜᴛ ɴᴏᴡ. Sᴏ ᴏᴜʀ ᴍᴏᴅᴇʀᴀᴛᴏʀs ᴄᴀɴ'ᴛ ᴜᴘʟᴏᴀᴅ ɪᴛ\n\n"
                         f"#Hɪɴᴅɪ_ɴᴏᴛ_ᴀᴠᴀɪʟᴀʙʟᴇ ❌</b>"
                     ),
                     reply_markup=InlineKeyboardMarkup(btn2)
@@ -1125,7 +1125,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
                     chat_id=int(SUPPORT_CHAT_ID),
                     text=(
                         f"<u>Hᴇʏ {user.mention}</u>\n\n"
-                        f"<b><code>{content}</code> ɪs Nᴏᴛ Aᴠᴀɪʟᴀʙʟᴇ ɪɴ Hɪɴᴅɪ ʀɪɢʜᴛ ɴᴏᴡ. Sᴏ ᴏᴜʀ ᴍᴏᴅᴇʀᴀᴛᴏʀs ᴄᴀɴ'ᴛ ᴜᴘʟᴏᴀᴅ ɪᴛ\n\n"
+                        f"<b><code>{content}</code> ɪs Nᴏᴛ Aᴠᴀɪʟᴀʙʟᴇ ʀɪɢʜᴛ ɴᴏᴡ. Sᴏ ᴏᴜʀ ᴍᴏᴅᴇʀᴀᴛᴏʀs ᴄᴀɴ'ᴛ ᴜᴘʟᴏᴀᴅ ɪᴛ\n\n"
                         f"#Hɪɴᴅɪ_ɴᴏᴛ_ᴀᴠᴀɪʟᴀʙʟᴇ ❌\n\n"
                         f"<small>Bʟᴏᴄᴋᴇᴅ? Uɴʙʟᴏᴄᴋ ᴛʜᴇ ʙᴏᴛ ᴛᴏ ʀᴇᴄᴇɪᴠᴇ ᴍᴇꜱꜱᴀɢᴇꜱ.</small></b>"
                     ),
@@ -1400,11 +1400,13 @@ async def cb_handler(client: Client, query: CallbackQuery):
 
     elif query.data == "buy":
         try:
-            btn = [[ 
+            btn = [[
                 InlineKeyboardButton('ꜱᴛᴀʀ', callback_data='star'),
                 InlineKeyboardButton('ᴜᴘɪ', callback_data='upi')
-            ],[
-                InlineKeyboardButton('🚫 ᴄʟᴏꜱᴇ 🚫', callback_data='close_data')
+	    ],[
+		InlineKeyboardButton('🚫 ᴄʟᴏꜱᴇ 🚫', callback_data='close_data')
+	    ],[
+                InlineKeyboardButton('⋞ ʙᴀᴄᴋ', callback_data='premium')
             ]]
             reply_markup = InlineKeyboardMarkup(btn)
             try:
@@ -1550,7 +1552,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
         _, grp_id = query.data.split("#")
         user_id = query.from_user.id if query.from_user else None
         if not await is_check_admin(client, int(grp_id), user_id):
-            return await query.answer("ɴᴇᴇᴅ ᴛᴏ ʙᴇ ᴀᴅᴍɪɴ ᴛᴏ ᴜꜱᴇ ᴛʜɪꜱ ✅.", show_alert=True)
+            return await query.answer("ʏᴏᴜ sʜᴏᴜʟᴅ ʙᴇ ᴀᴅᴍɪɴ ᴛᴏ ᴜꜱᴇ ᴛʜɪꜱ ✅.", show_alert=True)
         btn = await group_setting_buttons(int(grp_id)) 
         silentx = await client.get_chat(int(grp_id))
         await query.message.edit(text=f"ᴄʜᴀɴɢᴇ ʏᴏᴜʀ ɢʀᴏᴜᴘ ꜱᴇᴛᴛɪɴɢꜱ ✅\nɢʀᴏᴜᴘ ɴᴀᴍᴇ - '{silentx.title}'</b>⚙", reply_markup=InlineKeyboardMarkup(btn))
@@ -1559,7 +1561,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
         _, grp_id = query.data.split("#")
         user_id = query.from_user.id if query.from_user else None
         if not await is_check_admin(client, int(grp_id), user_id):
-            return await query.answer("<b>ɴᴇᴇᴅ ᴛᴏ ʙᴇ ᴀᴅᴍɪɴ ᴛᴏ ᴜꜱᴇ ᴛʜɪꜱ ✅.</b>", show_alert=True)
+            return await query.answer("<b>ʏᴏᴜ sʜᴏᴜʟᴅ ʙᴇ ᴀᴅᴍɪɴ ᴛᴏ ᴜꜱᴇ ᴛʜɪꜱ ✅.</b>", show_alert=True)
 
         settings = await get_settings(int(grp_id))
         verify_status = settings.get('is_verify', IS_VERIFY)
@@ -1580,7 +1582,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
         _, grp_id = query.data.split("#")
         user_id = query.from_user.id if query.from_user else None
         if not await is_check_admin(client, int(grp_id), user_id):
-            return await query.answer("ɴᴇᴇᴅ ᴛᴏ ʙᴇ ᴀᴅᴍɪɴ ᴛᴏ ᴜꜱᴇ ᴛʜɪꜱ ✅.", show_alert=True)
+            return await query.answer("ʏᴏᴜ sʜᴏᴜʟᴅ ʙᴇ ᴀᴅᴍɪɴ ᴛᴏ ᴜꜱᴇ ᴛʜɪꜱ ✅.", show_alert=True)
         btn = [[
             InlineKeyboardButton('ʟᴏɢ ᴄʜᴀɴɴᴇʟ', callback_data=f'changelog#{grp_id}'),
         ],[
@@ -1594,7 +1596,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
         silentx = await client.get_chat(int(grp_id))
         invite_link = await client.export_chat_invite_link(grp_id)
         if not await is_check_admin(client, int(grp_id), user_id):
-            return await query.answer("<b>ɴᴇᴇᴅ ᴛᴏ ʙᴇ ᴀᴅᴍɪɴ ᴛᴏ ᴜꜱᴇ ᴛʜɪꜱ ✅.</b>", show_alert=True)
+            return await query.answer("<b>ʏᴏᴜ sʜᴏᴜʟᴅ ʙᴇ ᴀᴅᴍɪɴ ᴛᴏ ᴜꜱᴇ ᴛʜɪꜱ ✅.</b>", show_alert=True)
         settings = await get_settings(int(grp_id))
         log_channel = settings.get(f'log', "ʏᴏᴜ ᴅɪᴅɴ'ᴛ ꜱᴇᴛ ᴀɴᴅ ᴠᴀʟᴜᴇ ꜱᴏ ᴜꜱɪɴɢ ᴅᴇꜰᴀᴜʟᴛ ᴠᴀʟᴜᴇꜱ")    
         await query.message.edit(f'<b>📌 ᴅᴇᴛᴀɪʟꜱ ᴏꜰ ʟᴏɢ ᴄʜᴀɴɴᴇʟ.\n\nʟᴏɢ ᴄʜᴀɴɴᴇʟ: <code>{log_channel}</code>.<b>')
@@ -1629,7 +1631,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
         _, grp_id = query.data.split("#")
         user_id = query.from_user.id if query.from_user else None
         if not await is_check_admin(client, int(grp_id), user_id):
-            return await query.answer("<b>ɴᴇᴇᴅ ᴛᴏ ʙᴇ ᴀᴅᴍɪɴ ᴛᴏ ᴜꜱᴇ ᴛʜɪꜱ ✅.</b>", show_alert=True)
+            return await query.answer("<b>ʏᴏᴜ sʜᴏᴜʟᴅ ʙᴇ ᴀᴅᴍɪɴ ᴛᴏ ᴜꜱᴇ ᴛʜɪꜱ ✅.</b>", show_alert=True)
         btn = [[
             InlineKeyboardButton('ᴄᴜꜱᴛᴏᴍ ᴄᴀᴘᴛɪᴏɴ', callback_data=f'changecaption#{grp_id}'),
         ],[
@@ -1643,7 +1645,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
         silentx = await client.get_chat(int(grp_id))
         invite_link = await client.export_chat_invite_link(grp_id)
         if not await is_check_admin(client, int(grp_id), user_id):
-            return await query.answer("<b>ɴᴇᴇᴅ ᴛᴏ ʙᴇ ᴀᴅᴍɪɴ ᴛᴏ ᴜꜱᴇ ᴛʜɪꜱ ✅.</b>", show_alert=True)
+            return await query.answer("<b>ʏᴏᴜ sʜᴏᴜʟᴅ ʙᴇ ᴀᴅᴍɪɴ ᴛᴏ ᴜꜱᴇ ᴛʜɪꜱ ✅.</b>", show_alert=True)
         settings = await get_settings(int(grp_id))
         current_caption = settings.get(f'caption', "ʏᴏᴜ ᴅɪᴅɴ'ᴛ ꜱᴇᴛ ᴀɴᴅ ᴠᴀʟᴜᴇ ꜱᴏ ᴜꜱɪɴɢ ᴅᴇꜰᴀᴜʟᴛ ᴠᴀʟᴜᴇꜱ")    
         await query.message.edit(f'<b>📌 ᴅᴇᴛᴀɪʟꜱ ᴏꜰ ᴄᴜꜱᴛᴏᴍ ᴄᴀᴘᴛɪᴏɴ.\n\nᴄᴜꜱᴛᴏᴍ ᴄᴀᴘᴛɪᴏɴ: <code>{current_caption}</code>.</b>')
@@ -1671,7 +1673,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
         _, set_type, status, grp_id = query.data.split("#")
         user_id = query.from_user.id if query.from_user else None
         if not await is_check_admin(client, int(grp_id), user_id):
-            return await query.answer("<b>ɴᴇᴇᴅ ᴛᴏ ʙᴇ ᴀᴅᴍɪɴ ᴛᴏ ᴜꜱᴇ ᴛʜɪꜱ ✅.</b>", show_alert=True)    
+            return await query.answer("<b>ʏᴏᴜ sʜᴏᴜʟᴅ ʙᴇ ᴀᴅᴍɪɴ ᴛᴏ ᴜꜱᴇ ᴛʜɪꜱ ✅.</b>", show_alert=True)    
         new_status = not (status == "True")
         await save_group_settings(int(grp_id), set_type, new_status)
         settings = await get_settings(int(grp_id))
@@ -1693,7 +1695,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
         _, grp_id = query.data.split("#")
         user_id = query.from_user.id if query.from_user else None
         if not await is_check_admin(client, int(grp_id), user_id):
-            return await query.answer("<b>ɴᴇᴇᴅ ᴛᴏ ʙᴇ ᴀᴅᴍɪɴ ᴛᴏ ᴜꜱᴇ ᴛʜɪꜱ ✅.</b>", show_alert=True)
+            return await query.answer("<b>ʏᴏᴜ sᴏᴜʟᴅ ʙᴇ ᴀᴅᴍɪɴ ᴛᴏ ᴜꜱᴇ ᴛʜɪꜱ ✅.</b>", show_alert=True)
         btn = [
             [
                 InlineKeyboardButton('ꜱʜᴏʀᴛɴᴇʀ 1', callback_data=f'set_verify1#{grp_id}'),
@@ -1711,7 +1713,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
         silentx = await client.get_chat(int(grp_id))
         invite_link = await client.export_chat_invite_link(grp_id)
         if not await is_check_admin(client, int(grp_id), user_id):
-            return await query.answer("<b>ɴᴇᴇᴅ ᴛᴏ ʙᴇ ᴀᴅᴍɪɴ ᴛᴏ ᴜꜱᴇ ᴛʜɪꜱ ✅.</b>", show_alert=True)
+            return await query.answer("<b>ʏᴏᴜ sʜᴏᴜʟᴅ ʙᴇ ᴀᴅᴍɪɴ ᴛᴏ ᴜꜱᴇ ᴛʜɪꜱ ✅.</b>", show_alert=True)
         settings = await get_settings(int(grp_id))
         suffix = "" if shortner_num == "1" else f"_{'two' if shortner_num == '2' else 'three'}"
         current_url = settings.get(f'shortner{suffix}', "ʏᴏᴜ ᴅɪᴅɴ'ᴛ ꜱᴇᴛ ᴀɴᴅ ᴠᴀʟᴜᴇ ꜱᴏ ᴜꜱɪɴɢ ᴅᴇꜰᴀᴜʟᴛ ᴠᴀʟᴜᴇꜱ")
@@ -1761,7 +1763,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
         _, grp_id = query.data.split("#")
         user_id = query.from_user.id if query.from_user else None
         if not await is_check_admin(client, int(grp_id), user_id):
-            return await query.answer("<b>ɴᴇᴇᴅ ᴛᴏ ʙᴇ ᴀᴅᴍɪɴ ᴛᴏ ᴜꜱᴇ ᴛʜɪꜱ ✅.</b>", show_alert=True)
+            return await query.answer("<b>ʏᴏᴜ sʜᴏᴜʟᴅ ʙᴇ ᴀᴅᴍɪɴ ᴛᴏ ᴜꜱᴇ ᴛʜɪꜱ ✅.</b>", show_alert=True)
         btn = [
             [
                 InlineKeyboardButton('2ɴᴅ ᴠᴇʀɪꜰɪᴄᴀᴛɪᴏɴ ᴛɪᴍᴇ', callback_data=f'set_time2#{grp_id}'),
@@ -1779,7 +1781,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
         silentx = await client.get_chat(int(grp_id))
         invite_link = await client.export_chat_invite_link(grp_id)
         if not await is_check_admin(client, int(grp_id), user_id):
-            return await query.answer("<b>ɴᴇᴇᴅ ᴛᴏ ʙᴇ ᴀᴅᴍɪɴ ᴛᴏ ᴜꜱᴇ ᴛʜɪꜱ ✅.</b>", show_alert=True)
+            return await query.answer("<b>ʏᴏᴜ sʜᴏᴜʟᴅ ʙᴇ ᴀᴅᴍɪɴ ᴛᴏ ᴜꜱᴇ ᴛʜɪꜱ ✅.</b>", show_alert=True)
         settings = await get_settings(int(grp_id))
         suffix = "" if time_num == "2" else "third_" if time_num == "3" else ""
         current_time = settings.get(f'{suffix}verify_time', 'Not set')
@@ -1815,7 +1817,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
         _, grp_id = query.data.split("#")
         user_id = query.from_user.id if query.from_user else None
         if not await is_check_admin(client, int(grp_id), user_id):
-            return await query.answer("<b>ɴᴇᴇᴅ ᴛᴏ ʙᴇ ᴀᴅᴍɪɴ ᴛᴏ ᴜꜱᴇ ᴛʜɪꜱ ✅.</b>", show_alert=True)
+            return await query.answer("<b>ʏᴏᴜ sʜᴏᴜʟᴅ ʙᴇ ᴀᴅᴍɪɴ ᴛᴏ ᴜꜱᴇ ᴛʜɪꜱ ✅.</b>", show_alert=True)
         btn = [
             [
                 InlineKeyboardButton('ᴛᴜᴛᴏʀɪᴀʟ 1', callback_data=f'set_tutorial1#{grp_id}'),
@@ -1833,7 +1835,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
         silentx = await client.get_chat(int(grp_id))
         invite_link = await client.export_chat_invite_link(grp_id)
         if not await is_check_admin(client, int(grp_id), user_id):
-            return await query.answer("<b>ɴᴇᴇᴅ ᴛᴏ ʙᴇ ᴀᴅᴍɪɴ ᴛᴏ ᴜꜱᴇ ᴛʜɪꜱ ✅.</b>", show_alert=True)
+            return await query.answer("<b>ʏᴏᴜ sʜᴏᴜʟᴅ ʙᴇ ᴀᴅᴍɪɴ ᴛᴏ ᴜꜱᴇ ᴛʜɪꜱ ✅.</b>", show_alert=True)
         settings = await get_settings(int(grp_id))
         suffix = "" if tutorial_num == "1" else f"_{'2' if tutorial_num == '2' else '3'}"
         tutorial_url = settings.get(f'tutorial{suffix}', "ʏᴏᴜ ᴅɪᴅɴ'ᴛ ꜱᴇᴛ ᴀɴᴅ ᴠᴀʟᴜᴇ ꜱᴏ ᴜꜱɪɴɢ ᴅᴇꜰᴀᴜʟᴛ ᴠᴀʟᴜᴇꜱ")    
