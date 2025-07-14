@@ -281,11 +281,11 @@ async def start(client, message):
             if STREAM_MODE:
                 btn = [
                     [InlineKeyboardButton('ɢᴇɴᴇʀᴀᴛᴇ sᴛʀᴇᴀᴍ & ᴅᴏᴡɴʟᴏᴀᴅ ʟɪɴᴋ', callback_data=f'streamfile:{file_id}')],
-                    [InlineKeyboardButton('ᴊᴏɪɴ ᴜᴘᴅᴀᴛᴇ ᴄʜᴀɴɴᴇʟ', url=UPDATE_CHANNEL_LNK)]  
+                    [InlineKeyboardButton('ᴊᴏɪɴ ᴜᴘᴅᴀᴛᴇs ᴄʜᴀɴɴᴇʟ', url=UPDATE_CHANNEL_LNK)]  
                 ]
             else:
                 btn = [
-                    [InlineKeyboardButton('ᴊᴏɪɴ ᴜᴘᴅᴀᴛᴇ ᴄʜᴀɴɴᴇʟ', url=UPDATE_CHANNEL_LNK)]
+                    [InlineKeyboardButton('ᴊᴏɪɴ ᴜᴘᴅᴀᴛᴇs ᴄʜᴀɴɴᴇʟ', url=UPDATE_CHANNEL_LNK)]
                 ]
             msg = await client.send_cached_media(
                 chat_id=message.from_user.id,
