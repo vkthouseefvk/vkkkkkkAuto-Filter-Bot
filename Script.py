@@ -65,8 +65,8 @@ class script(object):
 │
 <b>╰─────────────────────⍟</b>"""
 
-    EARN_INFO = """<b><i><blockquote> ɴᴏᴛʜɪɴɢ - </blockquote>
-ɴᴏᴛʜɪɴɢ ɴᴏᴡ .</i></b>"""    
+    EARN_INFO = """<b><i><blockquote> ᴊᴏɪɴ ᴜᴘᴅᴀᴛᴇs ᴄʜᴀɴɴᴇʟ - </blockquote>
+@ɪɴғɪɴɪᴛʏ_ᴍᴏᴠɪᴇs𝟸 .</i></b>"""    
    
     
     VERIFICATION_TEXT = """<b><i>👋 ʜᴇʏ {},
