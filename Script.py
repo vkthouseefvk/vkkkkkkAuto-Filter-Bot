@@ -66,7 +66,7 @@ class script(object):
 <b>╰─────────────────────⍟</b>"""
 
     EARN_INFO = """<b><i><blockquote> ᴊᴏɪɴ ᴜᴘᴅᴀᴛᴇs ᴄʜᴀɴɴᴇʟ - </blockquote>
-@ɪɴғɪɴɪᴛʏ_ᴍᴏᴠɪᴇs𝟸 .</i></b>"""    
+https://t.me/infinity_movies2 </i></b>"""    
    
     
     VERIFICATION_TEXT = """<b><i>👋 ʜᴇʏ {},
