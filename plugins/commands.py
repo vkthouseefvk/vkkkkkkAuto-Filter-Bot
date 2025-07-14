@@ -76,7 +76,7 @@ async def start(client, message):
         await dlt.delete()
         return         
     if message.chat.type in [enums.ChatType.GROUP, enums.ChatType.SUPERGROUP]:
-        silenxbotz=await message.reply_sticker("CAACAgEAAxkBAAENpaZnl898tVVOj-69IH89gx-8ee-CCAACWwIAAu8vQEXX2jgCrI2F-jYE")
+        silenxbotz=await message.reply_sticker("CAACAgIAAxkBAAEBvtNodL1TEC3Ao0cxQXmfogkDVK1n_wACVAADQbVWDGq3-McIjQH6HgQ")
         await asyncio.sleep(5)
         await silenxbotz.delete()
         if not await db.get_chat(message.chat.id):
