@@ -29,8 +29,8 @@ SPELL_IMG = environ.get("SPELL_IMG", "https://graph.org/file/13702ae26fb05df5266
 SUBSCRIPTION = (environ.get('SUBSCRIPTION', 'https://files.catbox.moe/l3nsdz.jpeg'))
 FSUB_IMG = (environ.get('FSUB_IMG', 'https://files.catbox.moe/5ddxyt.jpg')).split() 
 
-ADMINS = [int(admin) if id_pattern.search(admin) else admin for admin in environ.get('ADMINS', '6264858746').split()] 
-CHANNELS = [int(ch) if id_pattern.search(ch) else ch for ch in environ.get('CHANNELS', '--1002510859195 -1002405840644').split()]
+ADMINS = [int(admin) if id_pattern.search(admin) else admin for admin in environ.get('ADMINS', '').split()] 
+CHANNELS = [int(ch) if id_pattern.search(ch) else ch for ch in environ.get('CHANNELS', '-1002510859195 -1002405840644').split()]
 LOG_CHANNEL = int(environ.get('LOG_CHANNEL', '-1001728230648'))  
 BIN_CHANNEL = int(environ.get('BIN_CHANNEL', '-1001728230648'))  
 MOVIE_UPDATE_CHANNEL = int(environ.get('MOVIE_UPDATE_CHANNEL', '-1001608201110'))  
@@ -50,7 +50,7 @@ COLLECTION_NAME = environ.get('COLLECTION_NAME', 'INFINITY MOVIES')
 MULTIPLE_DB = is_enabled(os.environ.get('MULTIPLE_DB', "True"), False) # Type True For Turn On MULTIPLE DB FUNTION 
 DATABASE_URI2 = environ.get('DATABASE_URI2', "mongodb+srv://vkthouseef2:vkthouseef2@cluster0.jfza1kd.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0")
 
-GRP_LNK = environ.get('GRP_LNK', 'https://t.me/vk_moviegroup2')
+GRP_LNK = environ.get('GRP_LNK', 'https://t.me/vkmovie123f')
 CHNL_LNK = environ.get('CHNL_LNK', 'https://t.me/+LsnXi1i3K384Zjc1')
 OWNER_LNK = environ.get('OWNER_LNK', 'https://t.me/Vk_Thouseef')
 UPDATE_CHANNEL_LNK = environ.get('UPDATE_CHANNEL_LNK', 'https://t.me/+LsnXi1i3K384Zjc1')
