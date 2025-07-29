@@ -50,7 +50,7 @@ COLLECTION_NAME = environ.get('COLLECTION_NAME', 'INFINITY MOVIES')
 MULTIPLE_DB = is_enabled(os.environ.get('MULTIPLE_DB', "True"), False) # Type True For Turn On MULTIPLE DB FUNTION 
 DATABASE_URI2 = environ.get('DATABASE_URI2', "mongodb+srv://vkthouseef2:vkthouseef2@cluster0.jfza1kd.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0")
 
-GRP_LNK = environ.get('GRP_LNK', 'https://t.me/+3vgL3HQyJU8xZTFk')
+GRP_LNK = environ.get('GRP_LNK', 'https://t.me/vkmoviegroup')
 CHNL_LNK = environ.get('CHNL_LNK', 'https://t.me/+LsnXi1i3K384Zjc1')
 OWNER_LNK = environ.get('OWNER_LNK', 'https://t.me/Vk_Thouseef')
 UPDATE_CHANNEL_LNK = environ.get('UPDATE_CHANNEL_LNK', 'https://t.me/+LsnXi1i3K384Zjc1')
